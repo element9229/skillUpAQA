@@ -17,6 +17,7 @@ public class TestUiPage {
 //        System.out.println("enter number");
 //        Scanner readFromClientTerminal = new Scanner(System.in);
 //        int webSite = readFromClientTerminal.nextInt();
+//        comment
 
         String webUrl = ConfigProperties.getProperty("webUrl");
 
