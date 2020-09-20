@@ -1,33 +1,15 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
-import utils.ConfigProperties;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SeleniumGoogleSearchTest {
+public class SeleniumGoogleSearchTest extends BaseTest {
 
     @Test
-    public void searchSomeDataUsingGoogleForm() throws IOException, InterruptedException {
-        //        System.out.println("enter number");
-//        Scanner readFromClientTerminal = new Scanner(System.in);
-//        int webSite = readFromClientTerminal.nextInt();
-//        comment
-
-        String webUrl = ConfigProperties.getProperty("webUrl");
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-        WebDriver driver = new ChromeDriver(options);
-        driver.get(webUrl);
+    public void searchSomeDataUsingGoogleForm() throws Exception {
 
         WebElement element = driver.findElement(By.cssSelector("[role='combobox']"));
         element.click();
@@ -67,8 +49,6 @@ public class SeleniumGoogleSearchTest {
         }
 
         Thread.sleep( 5000);
-
-        driver.quit();
 
     }
 }
