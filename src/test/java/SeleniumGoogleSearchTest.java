@@ -25,11 +25,6 @@ public class SeleniumGoogleSearchTest extends BaseTest {
             System.out.println("The result is not correct");
         }
 
-//        for (int i =0; i<= searchResults.size()-1; i++) {
-//            System.out.println(searchResults.get(i).getText());
-//            System.out.println("\n");
-//        }
-
         List<Boolean> toCheck = new ArrayList<Boolean>();
 
         for (WebElement result : searchResults) {
@@ -48,8 +43,45 @@ public class SeleniumGoogleSearchTest extends BaseTest {
             System.out.println(result);
         }
 
-        Thread.sleep( 5000);
+        Thread.sleep(5000);
 
     }
-}
 
+    @Test
+    public void searchOtherDataUsingGoogleForm() throws Exception {
+
+        WebElement element = driver.findElement(By.cssSelector("[role='combobox']"));
+        element.click();
+        element.clear();
+        element.sendKeys("SkillUp");
+        element.sendKeys(Keys.ENTER);
+
+        List<WebElement> searchResults = driver.findElements(By.xpath("//div[@class='rc']"));
+
+        if (searchResults.size() == 9) {
+            System.out.println("The result is correct");
+        } else {
+            System.out.println("The result is not correct");
+        }
+
+        List<Boolean> toCheck = new ArrayList<Boolean>();
+
+        for (WebElement result : searchResults) {
+            String textFromSearchResult = result.getText();
+            System.out.println(textFromSearchResult);
+            System.out.println("\n");
+
+            if (textFromSearchResult.contains("SkillUp")) {
+                toCheck.add(true);
+            } else {
+                toCheck.add(false);
+            }
+        }
+
+        for (Boolean result : toCheck) {
+            System.out.println(result);
+        }
+
+        Thread.sleep(5000);
+    }
+}
