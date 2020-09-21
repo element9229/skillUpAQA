@@ -8,8 +8,8 @@ import java.util.List;
 
 public class SeleniumGoogleSearchTest extends BaseTest {
 
-    @Test
-    public void searchSomeDataUsingGoogleForm() throws Exception {
+    @Test(priority = 1)
+    public void searchSomeDataUsingGoogleForm1() throws Exception {
 
         WebElement element = driver.findElement(By.cssSelector("[role='combobox']"));
         element.click();
@@ -47,8 +47,8 @@ public class SeleniumGoogleSearchTest extends BaseTest {
 
     }
 
-    @Test
-    public void searchOtherDataUsingGoogleForm() throws Exception {
+    @Test (priority = 2)
+    public void searchOtherDataUsingGoogleForm2() throws Exception {
 
         WebElement element = driver.findElement(By.cssSelector("[role='combobox']"));
         element.click();
