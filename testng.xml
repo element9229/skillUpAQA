@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
+    <parameter name="browserName" value="Chrome"/>
+
     <test name="SeleniumGoogleSearchTest">
         <classes>
             <class name="SeleniumGoogleSearchTest"/>
