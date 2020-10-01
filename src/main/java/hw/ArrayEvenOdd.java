@@ -1,6 +1,6 @@
 package hw;
 
-public class arrayEvenOdd {
+public class ArrayEvenOdd {
     public static void main(String[] args) {
         int[] array = new int[]{-5, -4, -3, -2, -1, 1, 2, 3, 4, 5};
         int sum = 0;
