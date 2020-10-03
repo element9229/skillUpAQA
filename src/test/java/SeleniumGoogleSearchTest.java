@@ -1,15 +1,13 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
+import pages.LinkedInHomePage;
 
 public class SeleniumGoogleSearchTest extends BaseTest {
 
-    @Test(priority = 1)
+    @Test
     public void searchSomeDataUsingGoogleForm1() throws Exception {
-
+        Assert.assertTrue(linkedInLoginPage.isPageLoaded(),"Login page is not loaded");
+        LinkedInHomePage linkedInHomePage = linkedInLoginPage.login("tarassokal1@gmail.com","yA7TdooR!");
+        Assert.assertTrue(linkedInHomePage.isPageLoaded(),"Home page is not loaded");
     }
 }
