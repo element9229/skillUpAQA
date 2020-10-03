@@ -1,6 +1,6 @@
 package hw;
 
-public class arrayAverage {
+public class ArrayAverage {
     public static void main(String[] args) {
         int[] numbers = {-5,-15,21,13,27,32,44,51};
 

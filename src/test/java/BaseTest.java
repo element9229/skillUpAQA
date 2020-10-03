@@ -7,11 +7,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import pages.LinkedInLoginPage;
 import utils.ConfigProperties;
 
 public class BaseTest {
 
     public WebDriver driver;
+    public LinkedInLoginPage linkedInLoginPage;
 
     @Parameters("browserName")
     @BeforeMethod
@@ -35,15 +37,8 @@ public class BaseTest {
                 break;
         }
         driver.get(ConfigProperties.getProperty("webUrl"));
+        linkedInLoginPage = new LinkedInLoginPage(driver);
     }
-//        String webUrl = ConfigProperties.getProperty("webUrl");
-//
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--start-maximized");
-//
-//        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-//        driver = new ChromeDriver(options);
-//        driver.get(webUrl);
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod() {
