@@ -9,9 +9,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
     protected WebDriver driver;
+    protected WebDriverWait wait;
+
+    protected String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    protected String getCurrentTitle() {
+        return driver.getTitle();
+    }
+
+    protected boolean isUrlContains(String urlPart) {
+        try {
+            return wait.until(ExpectedConditions.urlContains(urlPart));
+        } catch (TimeoutException e) {
+            System.out.println("Url doesn't contain required part");
+            return false;
+        }
+    }
 
     protected WebElement waitUntilElementIsVisible(WebElement element, int seconds) {
-        WebDriverWait wait = new WebDriverWait(driver, seconds);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
