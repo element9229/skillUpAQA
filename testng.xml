@@ -4,9 +4,15 @@
 
     <parameter name="browserName" value="Chrome"/>
 
-    <test name="SeleniumGoogleSearchTest">
+    <test name="Main Login Tests">
         <classes>
-            <class name="SeleniumGoogleSearchTest"/>
+            <class name="LinkedInMainLoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Search Tests">
+        <classes>
+            <class name="LinkedInSearchTest"/>
         </classes>
     </test>
 </suite>
