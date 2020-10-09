@@ -28,13 +28,25 @@ public class BasePage {
         }
     }
 
-    protected WebElement waitUntilElementIsVisible(WebElement element, int seconds) {
+    protected WebElement waitUntilElementIsVisible(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected void assertElementIsVisible(WebElement element, int seconds, String message) {
+    protected WebElement waitUntilElementToBeClickable(WebElement element) {
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    protected void assertElementIsVisible(WebElement element, String message) {
         try {
-            waitUntilElementIsVisible(element, seconds);
+            waitUntilElementIsVisible(element);
+        } catch (TimeoutException exception) {
+            throw new AssertionError(message);
+        }
+    }
+
+    protected void assertElementIsClickable(WebElement element, String message) {
+        try {
+            waitUntilElementToBeClickable(element);
         } catch (TimeoutException exception) {
             throw new AssertionError(message);
         }
