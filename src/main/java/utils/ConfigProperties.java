@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/***
+ *
+ */
+
 public class ConfigProperties {
 
     public static String getProperty(String property) throws IOException {

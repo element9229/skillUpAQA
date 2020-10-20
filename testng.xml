@@ -6,13 +6,13 @@
 
     <test name="Main Login Tests">
         <classes>
-            <class name="LinkedInMainLoginTests"/>
+            <class name="LinkedinMainLoginTests"/>
         </classes>
     </test>
 
     <test name="Search Tests">
         <classes>
-            <class name="LinkedInSearchTest"/>
+            <class name="LinkedinSearchTest"/>
         </classes>
     </test>
 </suite>

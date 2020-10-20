@@ -1,0 +1,11 @@
+pages\BasePage.class
+pages\LinkedinHomePage.class
+hw\ArrayEvenOdd.class
+pages\LinkedinLoginPage.class
+pages\LinkedinLoginSubmitPage.class
+TestUiPage.class
+pages\LinkedInSearchPage.class
+hw\ArrayAverage.class
+hw\ArrayMinValue.class
+hw\ArrayMaxValue.class
+utils\ConfigProperties.class
