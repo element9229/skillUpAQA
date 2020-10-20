@@ -32,10 +32,17 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected WebElement waitUntilElementToBeClickable(WebElement element) {
+    protected WebElement waitUntilElementTobeClickable(WebElement element) {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    /***
+     *
+     * Assert that UI WebElement is visible
+     *
+     * @param element - provided UI WebElement to be visible
+     * @param message - text message in case WebElement is not visible
+     */
     protected void assertElementIsVisible(WebElement element, String message) {
         try {
             waitUntilElementIsVisible(element);
@@ -46,9 +53,10 @@ public class BasePage {
 
     protected void assertElementIsClickable(WebElement element, String message) {
         try {
-            waitUntilElementToBeClickable(element);
+            waitUntilElementTobeClickable(element);
         } catch (TimeoutException exception) {
             throw new AssertionError(message);
         }
     }
+
 }

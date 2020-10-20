@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LinkedInSearchPage extends BasePage {
+public class LinkedInSearchPage extends BasePage{
 
     @FindBy(css = "[class*='search-results__total']")
     private WebElement searchPageMainElement;
 
-    @FindBy(css = "//[class*='search-result--person']")
+    @FindBy(css = "[class*='search-result--person']")
     private List<WebElement> searchResultPersons;
 
     public LinkedInSearchPage(WebDriver driver, WebDriverWait webDriverWait) {
@@ -30,9 +30,7 @@ public class LinkedInSearchPage extends BasePage {
     public List<String> getSearchResults(){
         List<String> result = new ArrayList<>();
 
-        driver.findElement(By.cssSelector("[class*='search-results__total']")).sendKeys(Keys.CONTROL, Keys.END);
-        List<WebElement> totalElements = driver.findElements(By.cssSelector("[class*='search-result--person']"));
-        for (WebElement element : totalElements) {
+        for (WebElement element : searchResultPersons) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
             result.add(element.getText());
         }
@@ -40,6 +38,6 @@ public class LinkedInSearchPage extends BasePage {
     }
 
     public boolean isPageLoaded() {
-        return getCurrentUrl().equals("https://www.linkedin.com/search/results/all/");
+        return getCurrentUrl().contains("https://www.linkedin.com/search/results/all/");
     }
 }

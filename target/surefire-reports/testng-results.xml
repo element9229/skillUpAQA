@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="11575" started-at="2020-10-20T17:05:16Z" finished-at="2020-10-20T17:05:28Z">
+    <groups>
+    </groups>
+    <test name="Main Login Tests" duration-ms="11562" started-at="2020-10-20T17:05:16Z" finished-at="2020-10-20T17:05:28Z">
+      <class name="LinkedinMainLoginTests">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:LinkedinMainLoginTests@39529185]" name="beforeMethod" is-config="true" duration-ms="9985" started-at="2020-10-20T20:05:16Z" finished-at="2020-10-20T20:05:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="checkSuccessfulLoginToLinkedin(java.lang.String, java.lang.String)[pri:0, instance:LinkedinMainLoginTests@39529185]" name="checkSuccessfulLoginToLinkedin" duration-ms="2" started-at="2020-10-20T20:05:26Z" data-provider="validDataProvider" finished-at="2020-10-20T20:05:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[clarizenapi@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MadjikMadjik123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSuccessfulLoginToLinkedin -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:LinkedinMainLoginTests@39529185]" name="afterMethod" is-config="true" duration-ms="1562" started-at="2020-10-20T20:05:26Z" finished-at="2020-10-20T20:05:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkSuccessfulLoginToLinkedin status=SUCCESS method=LinkedinMainLoginTests.checkSuccessfulLoginToLinkedin(java.lang.String, java.lang.String)[pri:0, instance:LinkedinMainLoginTests@39529185] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- LinkedinMainLoginTests -->
+    </test> <!-- Main Login Tests -->
+    <test name="Search Tests" duration-ms="0" started-at="2020-10-20T17:05:28Z" finished-at="2020-10-20T17:05:28Z">
+    </test> <!-- Search Tests -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
