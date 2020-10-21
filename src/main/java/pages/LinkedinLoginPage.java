@@ -45,7 +45,7 @@ public class LinkedinLoginPage extends BasePage{
 
     public boolean isPageLoaded() throws IOException {
         return getCurrentUrl().equals(ConfigProperties.getProperty("webUrl"))
-                && getCurrentTitle().equals("LinkedIn Login, Sign in | LinkedIn")
+                && getCurrentTitle().equals("Вход в LinkedIn, Войти | LinkedIn")
                 && enterButton.isDisplayed();
     }
 }

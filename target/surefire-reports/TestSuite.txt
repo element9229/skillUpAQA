@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.93 sec - in TestSuite
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 43.142 sec <<< FAILURE! - in TestSuite
+checkLinkedInSearchFunctionality(LinkedinMainLoginTests)  Time elapsed: 0.021 sec  <<< FAILURE!
+java.lang.AssertionError: Login page is not loaded expected [true] but found [false]
+	at LinkedinMainLoginTests.checkLinkedInSearchFunctionality(LinkedinMainLoginTests.java:89)
+
+checkSuccessfulLoginToLinkedin(LinkedinMainLoginTests)  Time elapsed: 0.018 sec  <<< FAILURE!
+java.lang.AssertionError: Login page is not loaded expected [true] but found [false]
+	at LinkedinMainLoginTests.checkSuccessfulLoginToLinkedin(LinkedinMainLoginTests.java:60)
+
+emptyUserEmailAndUserPasswordTest(LinkedinMainLoginTests)  Time elapsed: 0.013 sec  <<< FAILURE!
+java.lang.AssertionError: Login page is not loaded expected [true] but found [false]
+	at LinkedinMainLoginTests.emptyUserEmailAndUserPasswordTest(LinkedinMainLoginTests.java:118)
+
+negativeLoginTest(LinkedinMainLoginTests)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: Login page is not loaded expected [true] but found [false]
+	at LinkedinMainLoginTests.negativeLoginTest(LinkedinMainLoginTests.java:146)
+
+checkLinkedInSearchFunctionality(LinkedinSearchTest)  Time elapsed: 0.012 sec  <<< FAILURE!
+java.lang.AssertionError: Login page is not loaded expected [true] but found [false]
+	at LinkedinSearchTest.checkLinkedInSearchFunctionality(LinkedinSearchTest.java:29)
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [All Test Suite]">
+  <parameter name="browserName" value="Chrome"/>
+  <test name="Main Login Tests(failed)">
+    <classes>
+      <class name="LinkedinSearchTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- LinkedinSearchTest -->
+      <class name="LinkedinMainLoginTests">
+        <methods>
+          <include name="checkSuccessfulLoginToLinkedin" invocation-numbers="0"/>
+          <include name="checkLinkedInSearchFunctionality" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="emptyUserEmailAndUserPasswordTest"/>
+          <include name="beforeMethod"/>
+          <include name="negativeLoginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- LinkedinMainLoginTests -->
+    </classes>
+  </test> <!-- Main Login Tests(failed) -->
+  <test name="Search Tests(failed)">
+    <classes>
+      <class name="LinkedinSearchTest">
+        <methods>
+          <include name="checkLinkedInSearchFunctionality"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- LinkedinSearchTest -->
+      <class name="LinkedinMainLoginTests">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- LinkedinMainLoginTests -->
+    </classes>
+  </test> <!-- Search Tests(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

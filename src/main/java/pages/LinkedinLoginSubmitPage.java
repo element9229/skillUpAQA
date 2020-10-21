@@ -35,6 +35,6 @@ public class LinkedinLoginSubmitPage extends BasePage{
 
     public boolean isPageLoaded() {
         return getCurrentUrl().contains("/login-submit")
-                && getCurrentTitle().equals("LinkedIn Login, Sign in | LinkedIn");
+                && getCurrentTitle().equals("Вход в LinkedIn, Войти | LinkedIn");
     }
 }
